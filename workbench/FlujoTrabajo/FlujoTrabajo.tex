@@ -1,0 +1,64 @@
+\documentclass{IEEEtran}
+
+
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+\title{Flujo de Trabajo}
+\author{Elaborado por: LaRana}
+\date{26 de Febrero de 2025}
+\newcommand{\be}[2]{\begin{#1}{#2}\end{#1}}
+\newcommand{\mb}[1]{\mathbb{#1}}
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\mono}[3]{\be{center}{\be{tikzpicture}{ \filldraw[fill = {#1} , thick] ({#2},{#3}) circle (0.5); \filldraw[fill={#1},thick]({#2}+.75,{#3 - 1.3} )  arc(0:180:0.8); \draw[thick] ({#2 -.85 },{#3-1.3})--(0.5,0); } }}
+
+\newcommand{\sumin}{\sum_{i=1}^n}
+\newtheorem{teo}{Teorema}
+\newtheorem{poof}{Demostraci\'{o}n}
+
+
+\begin{document}
+\maketitle
+
+\be{center}{
+	\be{tikzpicture}{
+		\filldraw[fill=blue, thick] (-0.25,1.3) circle (0.5);
+		%\draw[thick] (0,1) arc[start angle = 0, end angle =180, radius= 1](0.5);
+		\filldraw[fill = blue, thick] (0.5,0) arc(0:180:0.8);
+		\draw[thick] (-1.1,0) -- (0.5,0);
+			}
+}
+
+\mono{blue}{1}{2}
+%\input{carpeta/capitulo}
+\end{document}
+%\newtheorem{teo}{Teorema}
+
+%b - brackets matrix/
+% \[  \begin{bmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \end{bmatrix} \]
+%%v - vertical line matrix/
+% \[  \begin{vmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \end{vmatrix} \]
+ %V - double vertical line  matrix/
+%
+% \[  \begin{Vmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \end{Vmatrix} \]
+%p - parenthesis matrix/
+% \[  \begin{pmatrix} 0 & 0 & 0\\ 0 & 0 & 0 \end{pmatrix} \]
+
+%\[ \left\{ \begin{array}{ccc}  \end{array}        \right\} \]
+%
+%
+%
+%
+%
+%
+%
+%
+
+
+
+
+
+
+
