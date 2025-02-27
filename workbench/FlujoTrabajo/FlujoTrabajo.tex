@@ -1,6 +1,6 @@
 \documentclass{IEEEtran}
 
-
+\usepackage{xcolor}
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{amsmath}
@@ -12,7 +12,7 @@
 \newcommand{\mb}[1]{\mathbb{#1}}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\ol}[1]{\overline{#1}}
-\newcommand{\mono}[3]{\be{center}{\be{tikzpicture}{ \filldraw[fill = {#1} , thick] ({#2},{#3}) circle (0.5); \filldraw[fill={#1},thick]({#2}+.75,{#3 - 1.3} )  arc(0:180:0.8); \draw[thick] ({#2 -.85 },{#3-1.3})--(0.5,0); } }}
+\newcommand{\mono}[4]{\be{center}{\be{tikzpicture}{ \pgfmathsetmacro{\Xbod }{#3 +.75} \pgfmathsetmacro{\Ybod }{#4 -1.3} \filldraw[fill = {#1} , thick] ({#3},{#4}) circle (0.5); \filldraw[fill={#2},thick](\Xbod,\Ybod  )  arc(0:180:0.8); } }}
 
 \newcommand{\sumin}{\sum_{i=1}^n}
 \newtheorem{teo}{Teorema}
@@ -21,17 +21,55 @@
 
 \begin{document}
 \maketitle
+Los equipos permanentes (Administraci\'{o}n de Sistemas, QA\&Optimizaci\'{o}n, Seguridad \& Pruebas ) tienen 5 roles que cumplir: 
 
-\be{center}{
-	\be{tikzpicture}{
-		\filldraw[fill=blue, thick] (-0.25,1.3) circle (0.5);
-		%\draw[thick] (0,1) arc[start angle = 0, end angle =180, radius= 1](0.5);
-		\filldraw[fill = blue, thick] (0.5,0) arc(0:180:0.8);
-		\draw[thick] (-1.1,0) -- (0.5,0);
-			}
-}
+\be{itemize}{
+	\item \textcolor{red}{Lider de equipo}
+	\item \textcolor{green}{Responsable de Calidad}
+	\item \textcolor{blue}{Responsable de Documentaci\'{o}n}
+	\item \textcolor{purple}{Especialista}
+	\item \textcolor{orange!90!black}{Auxiliar}
+	}
+Idealmente cada rol es cubierto por una persona.
+%
+\mono{blue}{blue}{0}{7}
+\mono{green}{green}{2}{1}
+De ser necesario una persona puede cubrir hasta dos roles.
+\mono{red}{blue}{3}{4}
+\mono{green}{purple}{1}{2}
+Los roles de lider, responsables de calidad,  documentaci\'{o}n y especialista se espera que trabajen consistentemente en el mismo equipo durante la duraci\'{o}n del proyecto.
+\mono{red}{red}{-2}{1}
+El rol de auxiliar se espera que brinde apoyo en diferentes equipos, ya sea en los permanentes o en los complementarios. Dependiendo principalmente de la carga de trabajo.
+\mono{orange!90!black}{orange!90!black}{0}{-1}
+\newpage
+Los equipos complementarios (Topolog\'{i}a,Redes, \\Automatizaci\'{o}n) estaran a cargo de un coordinador
+\mono{yellow}{yellow}{-2}{1}
+Los coordinadores se coordinan con los lideres de equipo, manager del proyecto y lider del proyecto para generar una teor\'{i}a unificada del sistema. 
 
-\mono{blue}{1}{2}
+\mono{black}{black}{-2}{1}
+\mono{yellow}{yellow}{-2}{1}
+\mono{red}{red}{-2}{1}
+
+Los responsables de calidad y los responsables de documentaci\'{o}n conforman un equipo en si mismo para garantizar que el estilo y la calidad sean consistentes.
+
+\mono{blue}{blue}{0}{7}
+\mono{blue}{blue}{0}{7}
+
+\mono{green}{green}{2}{1}
+\mono{green}{green}{2}{1}
+
+%\be{center}{
+%	\be{tikzpicture}{
+%		\filldraw[fill=blue, thick] (-0.25,1.3) circle (0.5);
+%		%\draw[thick] (0,1) arc[start angle = 0, end angle =180, radius= 1](0.5);
+%		\filldraw[fill = blue, thick] (0.5,0) arc(0:180:0.8);
+%		\draw[thick] (-1.1,0) -- (0.5,0);
+%			}
+%}
+
+
+
+
 %\input{carpeta/capitulo}
 \end{document}
 %\newtheorem{teo}{Teorema}
