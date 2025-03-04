@@ -18,7 +18,8 @@ A partir de los formularios enviados se genero:
 + [Inventario de recursos](colab.research.google.com/drive/1aXXY24Kl7g5tQ1uE5Y7ldFCwUa_98sqV=sharing)
 + [Analisis de Hardware](colab.research.google.com/drive/1ir-V35nmYBEi7nEbl2l3YDB2-lSpZrXs?usp=sharing)
 
-Tras el analisis se llegaron a las siguientes conclusiones: 
+Tras el analisis se llegaron a las siguientes recomendaciones:  
+
 
 Más potente según Benchmark:
 
@@ -26,42 +27,6 @@ Más potente según Benchmark:
     2.- i5-11400H (31278) de Huerta Orozco Yago Raúl
     3.- Ryzen 5 5500U (20148) de Baeza Guerrero Roberto
 
-Menos potente:
-
-    Raspbian (2794) de Castillo Hernandez Nestor Eithan
-    Debian con Ryzen 7 3700U (2060) de Alvarado Reyes Jorge Miguel — aparentemente un benchmark muy bajo para un Ryzen 7, podría indicar algo particular en la medición.
-    AMD E-300 (476) de Martinez Arana Luis Daniel
-
-
-Elección de Nodo Maestro:
-
-    El Mac M2 Pro es el de mayor potencia, pero no cuenta con puerto Ethernet nativo. Se requeriría un adaptador.
-    
-    El i5-11400H (Laptop #7) tiene un muy buen puntaje (31278) pero solo 100 Mbps.
-
-    El Ryzen 5 5500U (Laptop #2) tiene 20148 de benchmark y cuenta con 1 Gbps de Ethernet nativo, lo cual es un gran punto a favor para nodo maestro (rendimiento razonablemente alto + buena conectividad).
-
-Posibles Cuellos de Botella:
-
-    AMD E-300 con 476 de benchmark y 100 Mbps.
-    
-    Raspbian con 4 GB RAM y 2794 de benchmark. Aunque tiene 1 Gbps, su potencia general es baja.
-
-    Ryzen 7 3700U marcando solo 2060 de benchmark, algo inusual para ese CPU (podría indicar problemas de configuración o test).
-
-Estado de Virtualización:
-
-    Varias máquinas tienen “No estoy seguro”. Para Docker y Spark, es preferible confirmar que esté habilitada en BIOS/UEFI.
-    Casi todas las demás indican “Habilitada”, lo que facilita la implementación de contenedores.
-
-RAM y Tipo de Disco:
-
-    La mayoría usan SSD, salvo la laptop de Castro López Cristian Alberto. Eso podría impactar en la velocidad de acceso a datos.
-    El rango de RAM va de 4 GB (Raspbian) a 16 GB (M2 Pro y otra con i5-1155G7). Para tareas de Spark en memoria, 8 GB se considera el mínimo deseable, por lo que menores a eso podrían ser limitantes.
-
-Adaptadores Ethernet:
-
-    Varias laptops no tienen puerto Ethernet nativo o tienen solo 100 Mbps. Para un cluster, se recomienda 1 Gbps, por lo que se tendrían que adquirir adaptadores USB-C o similares si se busca rendimiento óptimo.
 
 Recomendaciones
 Candidato a Nodo Maestro:
