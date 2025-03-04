@@ -14,10 +14,10 @@ Se realizaron tutoriales para:
 * <a href="https://www.github.com/eithan-hernandez/docker-cluster/tree/main">Montar una imagen de docker </a> 
 
 A partir de los formularios enviados se genero:
-
-* <a href="https://www.colab.research.google.com/drive/1aXXY24Kl7g5tQ1uE5Y7ldFCwUa_98sqV=sharing">Inventario de recursos
+* <a href="https://colab.research.google.com/drive/1aXXY24Kl7g5tQ1uE5Y7ldFCwUa_98sqV?usp=sharing ">Inventario de recursos
 </a> 
-* <a href="https://www.colab.research.google.com/drive/1ir-V35nmYBEi7nEbl2l3YDB2-lSpZrXs?usp=sharing">Analisis de Hardware</a> 
+* <a href="https://colab.research.google.com/drive/1ir-V35nmYBEi7nEbl2I3YDB2-lSpZrXs?usp=sharing
+">Analisis de Hardware</a> 
 
 Tras el analisis se llegaron a las siguientes recomendaciones:  
 
