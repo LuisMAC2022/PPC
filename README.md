@@ -4,7 +4,7 @@ El objetivo de este repositorio es recopilar los recursos que se han generado pa
 
 Reporte incial sobre como hacer un cluster e investigacion de las tecnologias de manejo de contenedores:
 
-* [Cluster](https://www.canva.com/design/DAGfR4a7whA/i02xSP3xdR74fdKJOCp10Q/edit)
+* <a href="https://www.canva.com/design/DAGfR4a7whA/i02xSP3xdR74fdKJOCp10Q/edit"> Clusters </a> 
 * [Apache Mesos](/PDFs/AM.pdf)
 * [Docker Swarm y Kubernetes](/PDFs/CO.pdf)
 
