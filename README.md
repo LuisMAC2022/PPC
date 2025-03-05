@@ -13,14 +13,11 @@ Se realizaron tutoriales para:
 * <a href="https://www.github.com/im-krizox/docker-project">Configurar un Cluster de Apache Spark en Docker Swarm </a> 
 * <a href="https://www.github.com/eithan-hernandez/docker-cluster/tree/main">Montar una imagen de docker </a> 
 
-A partir de los formularios enviados se genero:
+A partir de los formularios enviados se genero un inventario y un analisis de hardware:
 
 * <a href="https://colab.research.google.com/drive/1aXXY24Kl7g5tQ1uE5Y7ldFCwUa_98sqV?usp=sharing ">Inventario de recursos </a> 
-* <a href="https://colab.research.google.com/drive/1ir-V35nmYBEi7nEbl2I3YDB2-lSpZrXs?usp=sharing
-">Analisis de Hardware</a> 
-
-<a href="https://www.github.com/LuisMAC2022/PPC/blob/main/PDFs/RH.pdf" >Se puede consultar el resumen del analisis de Hardware aqui</a>
-<a href="https://www.github.com/LuisMAC2022/PPC/blob/main/analisisHardware" >El analisis completo esta disponible aqui </a>
+* <a href="https://www.github.com/LuisMAC2022/PPC/blob/main/PDFs/RH.pdf" >Se puede consultar el resumen del analisis de Hardware aqui</a>
+* <a href="https://www.github.com/LuisMAC2022/PPC/blob/main/analisisHardware" >El analisis completo esta disponible aqui </a>
 
 
 
