@@ -2,6 +2,8 @@
 
 El objetivo de este repositorio es recopilar los recursos que se han generado para el desarrollo del proyecto. 
 
+* <a href="https://docs.google.com/spreadsheets/d/1JpgB5HH0UOuyaKnHn6HBtzzIx-enJk4o4aeNsXsYAEo/edit?usp=sharing"> Se puede consultar el plan de trabajo aqui </>
+
 Reporte incial sobre como hacer un cluster e investigacion de las tecnologias de manejo de contenedores:
 
 * <a href="https://www.canva.com/design/DAGfR4a7whA/i02xSP3xdR74fdKJOCp10Q/edit"> Clusters </a> 
