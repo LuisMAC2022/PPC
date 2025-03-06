@@ -14,6 +14,7 @@ Se realizaron tutoriales para:
  
 * <a href="https://www.github.com/im-krizox/docker-project">Configurar un Cluster de Apache Spark en Docker Swarm </a> 
 * <a href="https://www.github.com/eithan-hernandez/docker-cluster/tree/main">Montar una imagen de docker </a>
+
 A partir de los formularios enviados se genero un inventario y un analisis de hardware:
 
 * <a href="https://colab.research.google.com/drive/1aXXY24Kl7g5tQ1uE5Y7ldFCwUa_98sqV?usp=sharing ">Inventario de recursos </a> 
