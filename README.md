@@ -23,7 +23,7 @@ A partir de los formularios enviados se genero un inventario y un analisis de ha
 
 Se ha generado la siguiente documentacion:
 
-* <a href="https://www.github.com/Jorge95Cortes/dockerized-spark-cluster-set-up">Configurar un Cluster de Apache Spark en Docker Swarm </a> 
+* <a href="https://www.github.com/Jorge95Cortes/dockerized-spark-cluster-set-up"> Dockerized Spark Cluster Setup </a> 
 
 
 
