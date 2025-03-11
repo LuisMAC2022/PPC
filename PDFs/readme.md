@@ -1,6 +1,6 @@
 
 <div style="display: flex; align-items:center;">
-<--img src="../imagenes/R.png" width="90%" -->
+<img src="../imagenes/R.png" width="90%" >
 <!--<img src="imagenes/Imagen2.jpg" width="20%" > -->
 </div>
 
