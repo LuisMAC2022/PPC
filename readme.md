@@ -6,6 +6,9 @@
 
 
 # Cluster para Programacion Paralela y Concurrente 
+
+Los productos de cada sprint se guardan en la carpeta de cada area.
+
 * <a href="https://docs.google.com/spreadsheets/d/1JpgB5HH0UOuyaKnHn6HBtzzIx-enJk4o4aeNsXsYAEo/edit?usp=sharing"> Se puede consultar el plan de trabajo aqui <a/>
 
 * <a href="https://github.com/LuisMAC2022/PPC/blob/main/PDFs/readme.md">Directorio de recursos </a> 
