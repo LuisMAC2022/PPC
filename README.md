@@ -1,8 +1,8 @@
 
-<p align="center">
-<img src="imagenes/R.png" width="80%" >
+<div style="display: flex; align-items:center;">
+<img src="imagenes/R.png" width="70%" >
 <img src="imagenes/Imagen2.jpg" width="20%" >
-</p>
+</div>
 ![](imagenes/R.png)
 
 
