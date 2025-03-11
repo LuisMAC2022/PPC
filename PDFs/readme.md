@@ -3,8 +3,6 @@
 <img src="imagenes/R.png" width="90%" >
 <!--<img src="imagenes/Imagen2.jpg" width="20%" > -->
 </div>
-<
-<img src="PDFs/workbench/Prueba_Jueves/Topologia_prueba-1.png">
 
 
 # Cluster para Programacion Paralela y Concurrente 
