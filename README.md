@@ -1,3 +1,8 @@
+
+<p align="center">
+<img src="imagenes/R.png" width="80%" >
+<img src="imagenes/Imagen2.jpg" width="20%" >
+</p>
 ![](imagenes/R.png)
 
 
