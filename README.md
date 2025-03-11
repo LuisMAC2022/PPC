@@ -1,3 +1,6 @@
+![](imagenes/R.png)
+
+
 # Cluster para Programacion Paralela y Concurrente 
 
 El objetivo de este repositorio es recopilar los recursos que se han generado para el desarrollo del proyecto. 
