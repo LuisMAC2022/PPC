@@ -1,0 +1,38 @@
+\documentclass[tikz,border=10pt]{standalone}
+
+
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+
+
+\newcommand{\be}[2]{\begin{#1}#2 \end{#1}}
+\begin{document}
+
+
+
+
+
+
+
+
+\be{tikzpicture}{
+
+	\node[draw,circle,fill=blue] (M) at (0,2) {MASTER};
+\node[draw,rectangle,fill=green] (A) at (2,2) {RED};
+\node[draw,circle,fill=red] (B) at (4,0) {WORKER};
+\node[draw,circle,fill=red] (C) at (4,2) {WORKER};
+\node[draw,circle,fill=red] (D) at (4,4) {WORKER};
+
+
+\draw[->,>= latex,very thick] (M) -- (A);
+\draw[->,>= latex,very thick](A) -- (B);
+\draw[->,>= latex,very thick] (A) -- (C);
+\draw[->,>= latex,very thick] (A) -- (D);
+
+
+}
+
+
+\end{document}
+
