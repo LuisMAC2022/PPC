@@ -2,7 +2,9 @@
 
 El proyecto se dividio por semanas en ciclos de desarrollo o sprints.
 
-Cada sprint tiene 5 dias de desarrollo, de jueves a martes, y 2 de entrega de productos, de martes a jueves.
+Cada sprint va de jueves a martes.
+
+De martes a jueves se hace una revision y se planifica el siguiente sprint.
 
 Cuando inicia un nuevo sprint se actualiza el estado de las tareas.
 
