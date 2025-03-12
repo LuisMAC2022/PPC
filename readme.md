@@ -8,14 +8,9 @@
 # Cluster para Programacion Paralela y Concurrente 
 
 
-
-
-
 En este momento estamos construyendo la siguiente interfaz:
 
 <img src="PDFs/workbench/Prueba_Jueves/Topologia_prueba-1.png">
-
-## Interfaz de distribucion
 
 Su funcion es repartir la carga entre los nodos de trabajo. 
 
@@ -33,11 +28,11 @@ Entregables de cada area:
 
 ### Redes
 
-    Configura los protocolos de comunicacion y de red: IP, puertos,firewall,etc
+    Configura la red: asigna IPs fija, puertos,protocolos de transmision,etc
 
 ### Administracion de Sistemas
 
-    Genera la imagen que usaran los nodos y desarrolla la interfaz de balanceo con spark.
+    Genera la imagen que usaran los nodos e inicia a programar la interfaz.
 
 ### Automatizacion
 
@@ -45,11 +40,11 @@ Entregables de cada area:
 
 ### Seguridad y pruebas 
 
-        
+    Coordina la prueba el dia jueves y viernes.
 
 ### Calidad y Optimizacion
     
-    
+    Valida los entregables de documentacion y programas.
 
 ### Documentacion
 
