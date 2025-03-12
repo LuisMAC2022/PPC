@@ -1,38 +1,37 @@
 \documentclass[tikz,border=10pt]{standalone}
 
-
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{amsmath}
-
-
+\usetikzlibrary{fit}
 \newcommand{\be}[2]{\begin{#1}#2 \end{#1}}
 \begin{document}
 
-
-
-
-
-
-
-
 \be{tikzpicture}{
 
-	\node[draw,circle,fill=blue] (M) at (0,2) {MASTER};
-\node[draw,rectangle,fill=green] (A) at (2,2) {RED};
-\node[draw,circle,fill=red] (B) at (4,0) {WORKER};
-\node[draw,circle,fill=red] (C) at (4,2) {WORKER};
-\node[draw,circle,fill=red] (D) at (4,4) {WORKER};
-
-
+	\node[draw,circle,fill=yellow] (U) at (0,2) {USER};
+	\node[draw,circle,fill=blue] (M) at (2,2) {MASTER};
+\node[draw,rectangle,fill=green] (A) at (4,2) {RED};
+\node[draw,circle,fill=red] (B) at (6,0) {WORKER};
+\node[draw,circle,fill=red] (C) at (6,2) {WORKER};
+\node[draw,circle,fill=red] (D) at (6,4) {WORKER};
+\node[draw,circle,fill=purple] (E) at (9,0) {STORAGE};
+\node[draw,circle,fill=purple] (F) at (9,2) {STORAGE};
+\node[draw,circle,fill=purple] (G) at (9,4) {STORAGE};
+\node[draw,circle,fill=orange] (V) at (12,2) {VALIDATE};
+%\node[draw,dashed,thick,fit= (B)(C)(D),label=above:{INTERFAZ DE TRABAJO}] (workers){};
+\node[draw,dashed,thick,fit=(M) (A)(B)(C)(D),label=above:{INTERFAZ DE DISTRIBUCI\'{O}N}] (workers){};
+\draw[->,>= latex,very thick] (U) -- (M);
 \draw[->,>= latex,very thick] (M) -- (A);
-\draw[->,>= latex,very thick](A) -- (B);
+\draw[->,>= latex,very thick] (A) -- (B);
 \draw[->,>= latex,very thick] (A) -- (C);
 \draw[->,>= latex,very thick] (A) -- (D);
-
-
-}
-
+\draw[->,>= latex,very thick] (B) -- (E);
+\draw[->,>= latex,very thick] (C) -- (F);
+\draw[->,>= latex,very thick] (D) -- (G);
+\draw[->,>= latex,very thick] (E) -- (V);
+\draw[->,>= latex,very thick] (F) -- (V);
+\draw[->,>= latex,very thick] (G) -- (V);}
 
 \end{document}
 
