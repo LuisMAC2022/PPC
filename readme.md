@@ -11,9 +11,17 @@
 * <a href="https://github.com/LuisMAC2022/PPC/blob/main/PDFs/readme.md">Directorio de recursos </a> 
 
 
-En este momento estamos construyendo la siguiente red:
+En este momento estamos construyendo la siguiente interfaz:
 
 <img src="PDFs/workbench/Prueba_Jueves/Topologia_prueba-1.png">
+
+Su funcion es repartir la carga entre los nodos de trabajo. 
+
+Para realizarlo debemos:
+
+    1-. Designar las computadoras que conformaran cada nodo.
+    2-. Instalar las dependencias necesarias y montar la red.
+    3-. Ejecutar un programa de prueba usando SPARK.
 
 
 
