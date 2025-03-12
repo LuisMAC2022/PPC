@@ -6,9 +6,9 @@
 
 
 # Cluster para Programacion Paralela y Concurrente 
-* <a href="https://docs.google.com/spreadsheets/d/1JpgB5HH0UOuyaKnHn6HBtzzIx-enJk4o4aeNsXsYAEo/edit?usp=sharing"> Se puede consultar el plan de trabajo aqui <a/>
 
-* <a href="https://github.com/LuisMAC2022/PPC/blob/main/PDFs/readme.md">Directorio de recursos </a> 
+
+
 
 
 En este momento estamos construyendo la siguiente interfaz:
@@ -29,18 +29,31 @@ Entregables de cada area:
 
 ### Topologia
 
+    Determina los equipos que conformaran cada nodo. 
+
 ### Redes
+
+    Configura los protocolos de comunicacion y de red: IP, puertos,firewall,etc
 
 ### Administracion de Sistemas
 
+    Genera la imagen que usaran los nodos y desarrolla la interfaz de balanceo con spark.
+
 ### Automatizacion
+
+    Automatiza la configuracion de la red e instalacion de imagen.
 
 ### Seguridad y pruebas 
 
+        
+
 ### Calidad y Optimizacion
+    
+    
 
 ### Documentacion
 
+    Desarrolla Manual de uso de modelos generativos de lenguajes.
 
 
 
@@ -51,10 +64,9 @@ Entregables de cada area:
 
 
 
+* <a href="https://docs.google.com/spreadsheets/d/1JpgB5HH0UOuyaKnHn6HBtzzIx-enJk4o4aeNsXsYAEo/edit?usp=sharing"> Se puede consultar el plan de trabajo aqui <a/>
 
-
-
-
+* <a href="https://github.com/LuisMAC2022/PPC/blob/main/PDFs/readme.md">Directorio de recursos </a> 
 
 
 Se ha generado la siguiente documentacion:
