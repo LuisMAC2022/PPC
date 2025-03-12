@@ -8,14 +8,14 @@ Cuando inicia un nuevo sprint se actualiza el estado de las tareas.
 
 Estas se miden por el siguiente semaforo:
 
-![Semaforo](../imagenes/semaforo/colores.jpg)
+![Semaforo](../imagenes/semaforo/olores.jpg)
 
 El sprint actual esta marcado por el color dorado.
 Cada que acaba un sprint el color de las tareas avanza segun el orden del semaforo.
 
 Las tareas completadas se marcan de color verde.
-![Naranja](../imagenes/semaforo/verde.jpg)
 Las tareas completadas antes de la fecha prevista se marcan de azul.
+![Verde](../imagenes/semaforo/verde.jpg)
 ![Azul](../imagenes/semaforo/azul.jpg)
 
 
