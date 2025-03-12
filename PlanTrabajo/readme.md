@@ -15,7 +15,7 @@ Cada que acaba un sprint el color de las tareas avanza segun el orden del semafo
 
 Las tareas completadas se marcan de color verde.
 Las tareas completadas antes de la fecha prevista se marcan de azul.
-![Verde](../imagenes/semaforo/verde.jpg)
-![Azul](../imagenes/semaforo/azul.jpg)
+![entrega](../imagenes/semaforo/entrega.jpg)
+
 
 
