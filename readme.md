@@ -1,7 +1,11 @@
 
-<div style="display: flex; align-items:center;">
+<div style="display: flex; align-items:center;"
+    <picture> 
+    <source ="imagenes/logo_dorado.png" media="(prefers-color-scheme: dark)">
+    <source ="imagenes/logo_azul.png" media="(prefers-color-scheme: light)">
 <img src="imagenes/logo_azul.png" width="100%" >
 <!--<img src="imagenes/Imagen2.jpg" width="20%" > -->
+    </picture>
 </div>
 
 
