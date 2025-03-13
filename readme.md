@@ -3,7 +3,7 @@
     <picture> 
     <source  media="(prefers-color-scheme: dark)" srcset ="imagenes/logo-dorado.jpg">
     <source  media="(prefers-color-scheme: light)" srcset ="imagenes/logo_azul.png" >
-<img src="imagenes/logo-dorado.jpg" width="100%" >
+<img src="imagenes/logo_azul.png" width="100%" >
 <!--<img src="imagenes/Imagen2.jpg" width="20%" > -->
     </picture>
 </div>
