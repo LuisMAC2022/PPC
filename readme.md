@@ -1,6 +1,10 @@
 
-<div style="display: flex; align-items:center;">
+<div style="display: flex; align-items:center;"
+    <picture> 
+    <source  media="(prefers-color-scheme: dark)" srcset ="imagenes/logo-dorado.jpg">
+    <source  media="(prefers-color-scheme: light)" srcset ="imagenes/logo_azul.png" >
 <img src="imagenes/logo_azul.png" width="100%" >
+    </picture>
 </div>
 
 
@@ -64,7 +68,7 @@ Entregables de cada area:
 
 
 
-* <a href="https://github.com/LuisMAC2022/PPC/tree/PlanTrabajo/PlanTrabajo"> Se puede consultar el plan de trabajo aqui <a/>
+* <a href="https://github.com/LuisMAC2022/PPC/tree/main/PlanTrabajo"> Se puede consultar el plan de trabajo aqui <a/>
 
 * <a href="https://github.com/LuisMAC2022/PPC/blob/main/PDFs/readme.md">Directorio de recursos </a> 
 
