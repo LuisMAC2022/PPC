@@ -1,11 +1,16 @@
 
 <div style="display: flex; align-items:center;">
 <img src="imagenes/logo_azul.png" width="100%" >
-<!--<img src="imagenes/Imagen2.jpg" width="20%" > -->
 </div>
 
 
 # Cluster para Programacion Paralela y Concurrente 
+
+
+
+<!--<img src="imagenes/jueves.jpg" width="50%" align="center" > -->
+
+
 
 
 En este momento estamos construyendo la siguiente interfaz:
