@@ -12,7 +12,7 @@
 
 
 
-<!--<img src="imagenes/jueves.jpg" width="50%" align="center" > -->
+<img src="imagenes/IMG_20250313_121024816.jpg" width="50%" align="center" > 
 
 
 
