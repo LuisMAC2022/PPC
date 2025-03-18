@@ -63,7 +63,7 @@ Entregables de cada area:
 
 
 
-* <a href="https://github.com/LuisMAC2022/PPC/tree/PlanTrabajo/PlanTrabajo"> Se puede consultar el plan de trabajo aqui <a/>
+* <a href="https://github.com/LuisMAC2022/PPC/tree/main/PlanTrabajo"> Se puede consultar el plan de trabajo aqui <a/>
 
 * <a href="https://github.com/LuisMAC2022/PPC/blob/main/PDFs/readme.md">Directorio de recursos </a> 
 
