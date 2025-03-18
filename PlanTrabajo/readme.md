@@ -19,5 +19,7 @@ Las tareas completadas se marcan de color verde.
 Las tareas completadas antes de la fecha prevista se marcan de azul.
 ![entrega](../imagenes/semaforo/entrega.jpg)
 
+![PlanTrabajo](../imagenes/plan.jpg)
+
 
 
