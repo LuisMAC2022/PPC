@@ -12,13 +12,12 @@ En este momento estamos construyendo la siguiente interfaz:
 
 <img src="PDFs/workbench/Prueba_Jueves/Topologia_prueba-1.png">
 
-Su funcion es repartir la carga entre los nodos de trabajo. 
 
 Pasos a realizar:
 
     1-. Designar las computadoras que conformaran cada nodo.
-    2-. Instalar las dependencias necesarias y montar la red.
-    3-. Ejecutar un programa de prueba usando SPARK.
+    2-. Instalar un manejador de contenedores y la imagen del proyecto. 
+    3-. Ejecutar un programa de prueba usando SPARK para distribuir 100GB de datos.
 
 Entregables de cada area:
 
@@ -28,19 +27,20 @@ Entregables de cada area:
 
 ### Redes
 
-    Configura la red: asigna IPs fija, puertos,protocolos de transmision,etc
+    Entrega mapa de red que incluye: Direccion ip fija, metodo de conexion 
 
 ### Administracion de Sistemas
 
-    Genera la imagen que usaran los nodos e inicia a programar la interfaz.
+
+    Programa el sistema de balanceo usando SPARK
 
 ### Automatizacion
 
-    Automatiza la configuracion de la red e instalacion de imagen.
+    Propuesta de interfaz de usuario.
 
 ### Seguridad y pruebas 
 
-    Coordina la prueba el dia jueves y viernes.
+    Coordina la prueba el dia jueves.
 
 ### Calidad y Optimizacion
     
@@ -48,7 +48,7 @@ Entregables de cada area:
 
 ### Documentacion
 
-    Desarrolla Manual de uso de modelos generativos de lenguajes.
+    Entrega manual de uso de modelos generativos de lenguajes.
 
 
 
