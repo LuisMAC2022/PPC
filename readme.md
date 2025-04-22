@@ -8,7 +8,7 @@
 </div>
 
 
-# Cluster para Programacion Paralela y Concurrenteee 
+# Cluster para Programacion Paralela y Concurrente 
 
 
 
