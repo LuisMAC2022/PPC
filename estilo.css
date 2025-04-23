@@ -1,8 +1,70 @@
-.main-body { display: flex; }
-#navbar { width: 20%; min-width: 200px; /* barra lateral ocupando 20% del espacio */ }
-#main-doc { width: 80%; padding: 20px; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.doc-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+#sidebar {
+  width: 240px;
+  background-color: #002b7a; /* Azul UNAM */
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+#sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-left: 3px solid transparent;
+}
+
+#sidebar a:hover {
+  border-left: 3px solid #bd8c00; /* Oro UNAM */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#contenido {
+  flex-grow: 1;
+  padding: 2rem;
+  background: white;
+  color: #000;
+}
+
+#contenido h2 {
+  margin-top: 2rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .main-body { flex-direction: column; } /* apilar nav encima del contenido */
-  #navbar { width: 100%; min-width: auto; }
-  #main-doc { width: 100%; }
+  .doc-container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  #contenido {
+    padding: 1rem;
+  }
 }
