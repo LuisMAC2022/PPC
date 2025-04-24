@@ -14,9 +14,9 @@
 
  <div class="doc-container">
   <nav id="sidebar">
-    <h2>Manual</h2>
+    <h2>Manual de uso de agentes generadores de lenguaje</h2>
     <ul>
-      <li><a href="#que-es">¿Qué es?</a></li>
+      <li><a href="#que-es">¿Qué son?</a></li>
       <li><a href="#casos">Casos de uso y limitaciones</a></li>
       <li><a href="#prompts">Prompts optimizados</a></li>
       <li><a href="#evitar">Evitar sesgos y alucinaciones</a></li>
@@ -25,9 +25,90 @@
   </nav>
 
 <main id="contenido">
-    <section id="que-es">
-      <h2>¿Qué es?</h2>
-      <p>Contenido del PDF aquí...</p>
+    <section id="que-son">
+      <h2>¿Qué son?</h2>
+      <p>Los generadores de lenguaje (o modelos generativos de lenguaje) son sistemas
+de inteligencia artificial entrenados para producir texto coherente en lenguaje natural a partir
+de una entrada o prompt. En esencia, aprenden la distribución estadística del idioma y
+predicen la siguiente palabra o frase en una secuencia de texto dadas las palabras
+anteriores</p>
+       <p>Esto les permite continuar oraciones, responder preguntas o crear contenidos completos
+imitando el estilo y contexto del texto de entrada. Técnicamente, un modelo de lenguaje
+asigna probabilidades a secuencias de palabras y selecciona aquellas más probables para
+construir una respuesta</p>
+      <a href="https://es.wikipedia.org/wiki/Modelaci%C3%B3n_del_lenguaje#:~:text=Modelaci%C3%B3n%20del%20lenguaje%20hace%20referencia,1%20%5D%E2%80%8B" target="_blank">Modelación de lenguaje - Wikipedia, la enciclopedia libre </a>
+      <p> Modelos modernos como GPT-3 o GPT-4 de OpenAI son ejemplos destacados de
+generadores de lenguaje de gran tamaño (LLMs, Large Language Models), con cientos de
+miles de millones de parámetros entrenados sobre enormes corpus de texto.</p>
+      <p>¿Cómo funcionan internamente? La mayoría de estos modelos se basan en redes
+neuronales profundas y, en particular, en la arquitectura llamada Transformer. Los
+Transformers revolucionaron el Procesamiento de Lenguaje Natural (PLN) al introducir un
+mecanismo de autoatención (self-attention) que permite mirar todo el contexto de la
+secuencia a la vez</p>
+      <p>A diferencia de las redes recurrentes (RNN) tradicionales que leían palabra por palabra en
+secuencia, los Transformers procesan las oraciones en paralelo, considerando cada palabra
+en relación con las demás sin perder dependencias lejanas</p>
+      <p>Esta arquitectura paralela hizo posible entrenar modelos mucho más grandes y manejar
+dependencias de largo alcance en el texto de forma más eficaz. Gracias a ello, los
+Transformers han logrado un desempeño sobresaliente en tareas de generación de
+lenguaje, superando a métodos previos basados en RNN o LSTM en traducción, resumen y
+otras tareas</p>
+      <p>Un concepto clave es que estos modelos operan de forma autorregresiva: generan texto
+palabra a palabra, prediciendo cada token siguiente basado en los tokens previos. Este
+modelado autorregresivo del lenguaje significa que, dado un contexto inicial, el modelo
+añade una palabra que considera probable, luego incorpora esa nueva palabra al contexto y
+repite el proceso para generar la siguiente, y así sucesivamente. Por ejemplo, el modelo
+GPT (Generative Pre-trained Transformer) sigue este principio: después de leer un prompt,
+va prediciendo cada palabra subsiguiente apoyándose en lo ya generado, logrando textos
+fluidos y coherentes. Este enfoque permite a un generador de lenguaje continuar un texto o
+responder consultas sin haber sido programado explícitamente para una tarea específica,
+aprovechando únicamente patrones aprendidos del lenguaje. De hecho, modelos como
+GPT-3 demostraron capacidad de realizar tareas nuevas con cero o pocos ejemplos
+simplemente gracias a este aprendizaje autoregresivo a gran escala</p>
+
+<p>Otra piedra angular tecnológica son los embeddings (incrustaciones vectoriales). Antes de
+procesar las palabras, el modelo las convierte en vectores de números en un espacio
+continuo (un embedding). Estos embeddings capturan características semánticas y
+sintácticas de las palabras: términos con significados similares terminan teniendo
+representaciones numéricas cercanas entre sí. En la práctica, la primera capa de la red
+neuronal (capa de embedding) aprende a mapear cada palabra (o sub-palabra) a un vector
+denso de dimensiones típicamente entre 300 y 1000, de forma que el modelo pueda operar
+con estas representaciones matemáticas. Por ejemplo, el embedding de "rey" resultará
+cercano al de "reina" en ese espacio vectorial, capturando cierta relación de género, y
+ambos estarán lejos del embedding de "manzana" por su diferencia semántica. Gracias a
+los embeddings, el modelo puede generalizar mejor el significado de las palabras y
+comprender contexto, alimentando las capas Transformer con una entrada numérica
+enriquecida en significado.</p>
+
+  <p>Entrenamiento masivo: Los generadores de lenguaje de última generación se pre-entrenan
+de forma no supervisada en conjuntos de datos gigantescos (por ejemplo, textos
+recopilados de internet). Durante este entrenamiento, simplemente intentan predecir
+palabras ocultas o la siguiente palabra en frases tomadas de dichos textos, sin necesidad
+de etiquetas humanas explícitas. Al exponerlos a billones de palabras, aprenden gramática,
+hechos del mundo, estilos de escritura y demás patrones lingüísticos.</p>
+
+  <p>Por ejemplo, GPT-3 (175 mil millones de parámetros) fue entrenado con datos de internet
+como Common Crawl (que contiene decenas de miles de millones de páginas web) y
+Wikipedia</p>
+
+    <p>Este pre-entrenamiento le permite luego realizar multitud de tareas de lenguaje con poca o
+ninguna adaptación adicional. En resumen, tecnológicamente los generadores de lenguaje
+actuales combinan: Transformers (para arquitectura de red eficiente), modelado
+autoregresivo (para generación secuencial de texto) y embeddings (para representación
+vectorial del lenguaje), todo potenciado por un entrenamiento a gran escala en datos
+textuales. El resultado son modelos capaces de producir texto novedoso y coherente en una
+amplia variedad de estilos y dominios, simulando sorprendentemente bien la escritura
+humana.</p>
+
+    <p>Los generadores de lenguaje son modelos de inteligencia artificial diseñados para producir
+texto en lenguaje natural a partir de una entrada (prompt). Se basan en la arquitectura
+Transformer, que permite procesar texto en paralelo de manera eficiente. Estos modelos
+utilizan aprendizaje profundo y grandes volúmenes de datos para predecir y generar texto
+de manera coherente, con aplicaciones en diversos campos como traducción, asistentes
+virtuales, generación de contenido y programación.</p>
+
+            <a href="https://es.wikipedia.org/wiki/Modelaci%C3%B3n_del_lenguaje#:~:text=Modelaci%C3%B3n%20del%20lenguaje%20hace%20referencia,1%20%5D%E2%80%8B" target="_blank">Modelación de lenguaje - Wikipedia, la enciclopedia libre </a>
+            <a href="https://aws.amazon.com/es/what-is/large-language-model/#:~:text=A%20diferencia%20de%20las%20redes,significativamente%20el%20tiempo%20de%20entrenamiento" target="_blank"></a>
     </section>
     <section id="casos">
       <h2>Casos de uso y limitaciones</h2>
