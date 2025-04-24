@@ -60,17 +60,21 @@
     #contenido h2 {
       margin-top: 2rem;
       color: #002b7a;
+      font-size: 1.8rem;
       cursor: pointer;
     }
 
     #contenido h3 {
       margin-top: 1.5rem;
-      color: #003f9a;
+      color: #0055cc;
+      font-size: 1.3rem;
       cursor: pointer;
     }
 
-    .hidden {
+    .verboso {
       display: none;
+      margin-top: 0.5rem;
+      color: #333;
     }
 
     @media (max-width: 768px) {
@@ -221,11 +225,10 @@
     });
 
     document.querySelectorAll('#contenido h3').forEach(h3 => {
-      const content = h3.nextElementSibling;
-      if (content && (content.tagName === 'P' || content.tagName === 'UL')) {
-        content.classList.add('hidden');
+      const verboso = h3.nextElementSibling?.classList.contains('verboso') ? h3.nextElementSibling : null;
+      if (verboso) {
         h3.addEventListener('click', () => {
-          content.classList.toggle('hidden');
+          verboso.style.display = verboso.style.display === 'none' ? 'block' : 'none';
         });
       }
     });
