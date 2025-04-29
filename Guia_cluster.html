@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía rápida - Prueba de Clúster</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 40px;">
+
+<h1>Guía rápida - Prueba de Clúster</h1>
+
+<hr>
+
+<h2>1. Arranque del Clúster</h2>
+<h3>Master:</h3>
+<pre><code>cd ~/spark-cluster
+sudo docker-compose up -d</code></pre>
+
+<h3>Worker:</h3>
+<pre><code>sudo docker run -d --rm \
+  --name &lt;nombre-del-worker&gt; \
+  --hostname &lt;nombre-del-worker&gt; \
+  --network host \
+  -e SPARK_MASTER_HOST=&lt;ip-del-master&gt; \
+  luismac2023/ppc:0.0.0 \
+  worker spark://&lt;ip-del-master&gt;:7077</code></pre>
+
+<hr>
+
+<h2>2. Verificar que todo está levantado</h2>
+<p><strong>Ver contenedores activos:</strong></p>
+<pre><code>docker ps</code></pre>
+
+<p><strong>Ver Spark UI:</strong></p>
+<ul>
+  <li>Abrir navegador en <code>http://&lt;ip-del-master&gt;:8080</code></li>
+  <li>Confirmar que Master y Workers están conectados</li>
+</ul>
+
+<hr>
+
+<h2>3. Ejecutar el programa de prueba</h2>
+<p><strong>Copiar stress_test.py al contenedor Master:</strong></p>
+<pre><code>sudo docker cp stress_test.py spark-master:/root/</code></pre>
+
+<p><strong>Entrar al contenedor Master:</strong></p>
+<pre><code>sudo docker exec -it spark-master /bin/bash</code></pre>
+
+<p><strong>Ejecutar el script:</strong></p>
+<pre><code>$SPARK_HOME/bin/spark-submit --master spark://&lt;ip-del-master&gt;:7077 /root/stress_test.py</code></pre>
+
+<hr>
+
+<h2>4. Detener el clúster</h2>
+<pre><code>sudo docker stop &lt;nombre-del-worker&gt;</code></pre>
+<pre><code>cd ~/spark-cluster
+sudo docker-compose down</code></pre>
+
+<hr>
+
+<h2>5. Solución rápida de errores comunes</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr>
+  <th>Error</th>
+  <th>Solución</th>
+</tr>
+<tr>
+  <td>Imagen no encontrada</td>
+  <td><code>docker pull luismac2023/ppc:0.0.0</code> o cargar desde archivo .tar</td>
+</tr>
+<tr>
+  <td>Contenedor no arranca</td>
+  <td>Ver logs con <code>docker logs &lt;nombre-del-worker&gt;</code></td>
+</tr>
+<tr>
+  <td>No conecta al Master</td>
+  <td>Revisar IP correcta en comando o en <code>docker-compose.yml</code> y conexión física de red</td>
+</tr>
+<tr>
+  <td>Workers no aparecen en Spark UI</td>
+  <td>Revisar <code>docker ps</code> y reiniciar Worker si es necesario</td>
+</tr>
+</table>
+
+<hr>
+
+<p style="text-align: center;">Preparado para la prueba de clúster.</p>
+
+</body>
+</html>
