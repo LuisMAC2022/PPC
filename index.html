@@ -1,1 +1,233 @@
-testo
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPPC</title>
+  <style>
+    :root {
+      --azul-unam: #002147;
+      --dorado-unam: #c9a23f;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background: var(--azul-unam);
+      color: white;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .menu {
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+    .menu-options {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: var(--azul-unam);
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .menu:hover .menu-options {
+      display: block;
+    }
+    .menu-options a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 5px 0;
+    }
+    .menu-options a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      color: var(--dorado-unam);
+    }
+    .hero {
+      margin-top: 60px;
+      text-align: center;
+      padding: 40px;
+      color: var(--azul-unam);
+    }
+    .buttons button,
+    .ejemplo button,
+    .footer-buttons button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .buttons button:nth-child(1),
+    .ejemplo button:nth-child(4),
+    .footer-buttons button:nth-child(1) {
+      background: var(--dorado-unam);
+      color: var(--azul-unam);
+    }
+    .buttons button:nth-child(2),
+    .ejemplo button:nth-child(5),
+    .footer-buttons button:nth-child(2) {
+      background: var(--azul-unam);
+      color: var(--dorado-unam);
+    }
+    .content {
+      display: flex;
+      padding: 20px;
+      color: var(--azul-unam);
+    }
+    .left {
+      flex: 1;
+      padding: 20px;
+    }
+    .left ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .left li {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .right {
+      flex: 1;
+      padding: 20px;
+    }
+    .ejemplos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background-color: #f0f0f0;
+    }
+    .ejemplo {
+      width: 300px;
+      background: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .ejemplo img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+  </style>
+  <script>
+    const contenidos = {
+      Docker: {
+        texto: "Nos permite empaquetar y distribuir de manera sencilla nuestra aplicación, asegurando un entorno consistente y compatibilidad entre sistemas operativos diferentes.",
+        imagen: "docker.jpg"
+      },
+      Swarm: {
+        texto: "Lo usamos para levantar los servicios, conectar y administrar los nodos. Permite asignar tareas, monitorear el estado de la red y reiniciar los nodos si ocurre un fallo.",
+        imagen: "swarm.jpg"
+      },
+      Hadoop: {
+        texto: "El ecosistema de Hadoop es muy extenso. Incluye sistemas de gestión de archivos, distribución de tareas, cifrado, seguridad, etc. Hasta este momento, en el proyecto usamos las librerías Hadoop Commons, ya que es una dependencia de Spark para acceder al sistema de archivos.",
+        imagen: "hadoop.jpg"
+      },
+      Spark: {
+        texto: "Spark permite distribuir el trabajo entre nodos, realiza sus cálculos en memoria RAM y es compatible con diferentes lenguajes. Nosotros usamos Python.",
+        imagen: "spark.jpg"
+      },
+      Jupyter: {
+        texto: "Jupyter permite ejecutar código, generar visualizaciones y acompañarlo de texto explicativo.",
+        imagen: "jupyter.jpg"
+      }
+    };
+
+    function mostrarContenido(tecnologia) {
+      document.getElementById("descripcion").textContent = contenidos[tecnologia].texto;
+      document.getElementById("imagenTec").src = contenidos[tecnologia].imagen;
+      document.getElementById("imagenTec").alt = tecnologia;
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="menu">
+      ≡
+      <div class="menu-options">
+        <a href="#documentacion">Documentación</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#ejemplos">Ejemplos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+    <div>PPPC</div>
+  </div>
+
+  <div class="hero">
+    <h1><span class="highlight">Programación Paralela y Concurrente</span> es el arte de dividir y distribuir una tarea con la intención de realizarla en menos tiempo entre múltiples computadoras.</h1>
+    <p>Este proyecto busca conectar computadoras personales y así montar una red que sirva de lienzo para practicar este tipo de programación.</p>
+    <div class="buttons">
+      <button>Conócenos</button>
+      <button>Descarga</button>
+    </div>
+    <img src="portada.jpg" alt="Imagen relevante de portada" style="width:80%; max-width:600px;">
+  </div>
+
+  <div class="content">
+    <div class="left">
+      <h2>Tecnologías</h2>
+      <ul>
+        <li onclick="mostrarContenido('Docker')">Docker</li>
+        <li onclick="mostrarContenido('Swarm')">Swarm</li>
+        <li onclick="mostrarContenido('Hadoop')">Hadoop</li>
+        <li onclick="mostrarContenido('Spark')">Spark</li>
+        <li onclick="mostrarContenido('Jupyter')">Jupyter</li>
+      </ul>
+      <p id="descripcion">Selecciona una tecnología para ver su descripción.</p>
+    </div>
+    <div class="right">
+      <h2>Imagen de TEC</h2>
+      <img id="imagenTec" src="tec.jpg" alt="Imagen del TEC" style="width:100%;">
+    </div>
+  </div>
+
+  <div class="ejemplos">
+    <div class="ejemplo">
+      <img src="ejemplo1.jpg" alt="Ejemplo 1">
+      <h3>Título Ejemplo 1</h3>
+      <p>Descripción breve del primer ejemplo relacionado con la tecnología.</p>
+      <button>Ver más</button>
+      <button>Descargar</button>
+    </div>
+    <div class="ejemplo">
+      <img src="ejemplo2.jpg" alt="Ejemplo 2">
+      <h3>Título Ejemplo 2</h3>
+      <p>Descripción breve del segundo ejemplo relacionado con la tecnología.</p>
+      <button>Ver más</button>
+      <button>Descargar</button>
+    </div>
+    <div class="ejemplo">
+      <img src="ejemplo3.jpg" alt="Ejemplo 3">
+      <h3>Título Ejemplo 3</h3>
+      <p>Descripción breve del tercer ejemplo relacionado con la tecnología.</p>
+      <button>Ver más</button>
+      <button>Descargar</button>
+    </div>
+  </div>
+
+  <div class="footer-buttons">
+    <button>Ver más</button>
+    <button>Descargar</button>
+  </div>
+</body>
+</html>
