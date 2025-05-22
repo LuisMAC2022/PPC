@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PPPC</title>
+  <title>PPC</title>
   <style>
     :root {
       --azul-unam: #002147;
@@ -22,12 +22,12 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
     .menu {
       font-size: 24px;
       cursor: pointer;
       position: relative;
+      margin-right: 20px;
     }
     .menu-options {
       display: none;
@@ -37,9 +37,6 @@
       background: var(--azul-unam);
       border: 1px solid #ccc;
       padding: 10px;
-    }
-    .menu:hover .menu-options {
-      display: block;
     }
     .menu-options a {
       display: block;
@@ -157,20 +154,25 @@
       document.getElementById("imagenTec").src = contenidos[tecnologia].imagen;
       document.getElementById("imagenTec").alt = tecnologia;
     }
+
+    function toggleMenu() {
+      const menu = document.getElementById("menuOpciones");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
   </script>
 </head>
 <body>
   <div class="navbar">
-    <div class="menu">
+    <div class="menu" onclick="toggleMenu()">
       ≡
-      <div class="menu-options">
+      <div id="menuOpciones" class="menu-options">
         <a href="#documentacion">Documentación</a>
         <a href="#descargas">Descargas</a>
         <a href="#ejemplos">Ejemplos</a>
         <a href="#contacto">Contacto</a>
       </div>
     </div>
-    <div>PPC</div>
+    <div style="margin-left: 10px;">PPC</div>
   </div>
 
   <div class="hero">
@@ -197,29 +199,29 @@
     </div>
     <div class="right">
       <h2>Imagen de TEC</h2>
-      <img id="imagenTec" src="tec.jpg" alt="Imagen del TEC" style="width:100%;">
+      <img id="imagenTec" src="imagenes/tec.jpg" alt="Imagen del TEC" style="width:100%;">
     </div>
   </div>
 
   <div class="ejemplos">
     <div class="ejemplo">
-      <img src="ejemplo1.jpg" alt="Ejemplo 1">
-      <h3>Título Ejemplo 1</h3>
-      <p>Descripción breve del primer ejemplo relacionado con la tecnología.</p>
+      <img src="imagenes/ejemplo1.jpg" alt="Detección de fraude">
+      <h3>Detección de fraude</h3>
+      <p>Modelo distribuido para identificar transacciones sospechosas en grandes volúmenes de datos.</p>
       <button>Ver más</button>
       <button>Descargar</button>
     </div>
     <div class="ejemplo">
-      <img src="ejemplo2.jpg" alt="Ejemplo 2">
-      <h3>Título Ejemplo 2</h3>
-      <p>Descripción breve del segundo ejemplo relacionado con la tecnología.</p>
+      <img src="imagenes/ejemplo2.jpg" alt="Atención hospitalaria">
+      <h3>Atención hospitalaria</h3>
+      <p>Simulación de flujos de atención médica para optimizar recursos y tiempos de espera.</p>
       <button>Ver más</button>
       <button>Descargar</button>
     </div>
     <div class="ejemplo">
-      <img src="ejemplo3.jpg" alt="Ejemplo 3">
-      <h3>Título Ejemplo 3</h3>
-      <p>Descripción breve del tercer ejemplo relacionado con la tecnología.</p>
+      <img src="imagenes/ejemplo3.jpg" alt="Movilidad en el Metro">
+      <h3>Movilidad en el Metro</h3>
+      <p>Análisis de patrones de movilidad para mejorar la eficiencia del sistema de transporte.</p>
       <button>Ver más</button>
       <button>Descargar</button>
     </div>
