@@ -7,11 +7,14 @@
   <style>
     :root {
       --azul-unam: #002147;
+      --azul-claro: #1c3c72;
       --dorado-unam: #c9a23f;
+      --dorado-claro: #eacb76;
     }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
     }
     .navbar {
       background: var(--azul-unam);
@@ -57,7 +60,6 @@
       color: var(--azul-unam);
     }
     .buttons button,
-    .ejemplo button,
     .footer-buttons button {
       margin: 10px 5px;
       padding: 10px 20px;
@@ -68,40 +70,14 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
     .buttons button:nth-child(1),
-    .ejemplo button:nth-child(4),
     .footer-buttons button:nth-child(1) {
       background: var(--dorado-unam);
       color: var(--azul-unam);
     }
     .buttons button:nth-child(2),
-    .ejemplo button:nth-child(5),
     .footer-buttons button:nth-child(2) {
       background: var(--azul-unam);
       color: var(--dorado-unam);
-    }
-    .content {
-      display: flex;
-      padding: 20px;
-      color: var(--azul-unam);
-    }
-    .left {
-      flex: 1;
-      padding: 20px;
-    }
-    .left ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .left li {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-    .right {
-      flex: 1;
-      padding: 20px;
     }
     .ejemplos {
       display: flex;
@@ -111,50 +87,51 @@
       background-color: #f0f0f0;
     }
     .ejemplo {
+      position: relative;
       width: 300px;
-      background: white;
-      padding: 20px;
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
       margin: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      color: white;
     }
-    .ejemplo img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 15px;
+    .ejemplo .capa-superior {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+    }
+    .ejemplo h3 {
+      margin: 0;
+      font-size: 20px;
+      color: var(--dorado-claro);
+    }
+    .ejemplo p {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #fff;
+    }
+    .rostros {
+      display: flex;
+      gap: 5px;
+    }
+    .rostros img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid white;
     }
   </style>
   <script>
-    const contenidos = {
-      Docker: {
-        texto: "Nos permite empaquetar y distribuir de manera sencilla nuestra aplicación, asegurando un entorno consistente y compatibilidad entre sistemas operativos diferentes.",
-        imagen: "imagenes/docker.png"
-      },
-      Swarm: {
-        texto: "Lo usamos para levantar los servicios, conectar y administrar los nodos. Permite asignar tareas, monitorear el estado de la red y reiniciar los nodos si ocurre un fallo.",
-        imagen: "imagenes/swarm.jpg"
-      },
-      Hadoop: {
-        texto: "El ecosistema de Hadoop es muy extenso. Incluye sistemas de gestión de archivos, distribución de tareas, cifrado, seguridad, etc. Hasta este momento, en el proyecto usamos las librerías Hadoop Commons, ya que es una dependencia de Spark para acceder al sistema de archivos.",
-        imagen: "imagenes/hadoop.png"
-      },
-      Spark: {
-        texto: "Spark permite distribuir el trabajo entre nodos, realiza sus cálculos en memoria RAM y es compatible con diferentes lenguajes. Nosotros usamos Python.",
-        imagen: "imagenes/spark.png"
-      },
-      Jupyter: {
-        texto: "Jupyter permite ejecutar código, generar visualizaciones y acompañarlo de texto explicativo.",
-        imagen: "imagenes/jupyter.png"
-      }
-    };
-
-    function mostrarContenido(tecnologia) {
-      document.getElementById("descripcion").textContent = contenidos[tecnologia].texto;
-      document.getElementById("imagenTec").src = contenidos[tecnologia].imagen;
-      document.getElementById("imagenTec").alt = tecnologia;
-    }
-
     function toggleMenu() {
       const menu = document.getElementById("menuOpciones");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
@@ -185,45 +162,50 @@
     <img src="imagenes/foto.jpeg" alt="Imagen relevante de portada" style="width:80%; max-width:600px;">
   </div>
 
-  <div class="content">
-    <div class="left">
-      <h2>Tecnologías</h2>
-      <ul>
-        <li onclick="mostrarContenido('Docker')">Docker</li>
-        <li onclick="mostrarContenido('Swarm')">Swarm</li>
-        <li onclick="mostrarContenido('Hadoop')">Hadoop</li>
-        <li onclick="mostrarContenido('Spark')">Spark</li>
-        <li onclick="mostrarContenido('Jupyter')">Jupyter</li>
-      </ul>
-      <p id="descripcion">Selecciona una tecnología para ver su descripción.</p>
-    </div>
-    <div class="right">
-      <h2>Imagen de TEC</h2>
-      <img id="imagenTec" src="imagenes/tec.jpg" alt="Imagen del TEC" style="width:100%;">
-    </div>
-  </div>
-
   <div class="ejemplos">
-    <div class="ejemplo">
-      <img src="imagenes/ejemplo1.jpg" alt="Detección de fraude">
-      <h3>Detección de fraude</h3>
-      <p>Modelo distribuido para identificar transacciones sospechosas en grandes volúmenes de datos.</p>
-      <button>Ver más</button>
-      <button>Descargar</button>
+    <div class="ejemplo" style="background-image: url('imagenes/ejemplo1_fondo.jpg');">
+      <div class="capa-superior">
+        <div>
+          <img src="imagenes/hongo1.png" alt="Hongo decorativo" style="width:50px;">
+          <h3>Detección de fraude</h3>
+          <p>Identificación de patrones sospechosos en grandes volúmenes de datos bancarios.</p>
+        </div>
+        <div class="rostros">
+          <img src="imagenes/user1.png" alt="integrante">
+          <img src="imagenes/user2.png" alt="integrante">
+          <img src="imagenes/user3.png" alt="integrante">
+        </div>
+      </div>
     </div>
-    <div class="ejemplo">
-      <img src="imagenes/ejemplo2.jpg" alt="Atención hospitalaria">
-      <h3>Atención hospitalaria</h3>
-      <p>Simulación de flujos de atención médica para optimizar recursos y tiempos de espera.</p>
-      <button>Ver más</button>
-      <button>Descargar</button>
+
+    <div class="ejemplo" style="background-image: url('imagenes/ejemplo2_fondo.jpg');">
+      <div class="capa-superior">
+        <div>
+          <img src="imagenes/hongo2.png" alt="Hongo decorativo" style="width:50px;">
+          <h3>Atención hospitalaria</h3>
+          <p>Simulación de flujos médicos para optimizar los recursos del hospital.</p>
+        </div>
+        <div class="rostros">
+          <img src="imagenes/user4.png" alt="integrante">
+          <img src="imagenes/user5.png" alt="integrante">
+          <img src="imagenes/user6.png" alt="integrante">
+        </div>
+      </div>
     </div>
-    <div class="ejemplo">
-      <img src="imagenes/ejemplo3.jpg" alt="Movilidad en el Metro">
-      <h3>Movilidad en el Metro</h3>
-      <p>Análisis de patrones de movilidad para mejorar la eficiencia del sistema de transporte.</p>
-      <button>Ver más</button>
-      <button>Descargar</button>
+
+    <div class="ejemplo" style="background-image: url('imagenes/ejemplo3_fondo.jpg');">
+      <div class="capa-superior">
+        <div>
+          <img src="imagenes/hongo3.png" alt="Hongo decorativo" style="width:50px;">
+          <h3>Movilidad en el Metro</h3>
+          <p>Análisis de trayectos para mejorar la eficiencia en el transporte público.</p>
+        </div>
+        <div class="rostros">
+          <img src="imagenes/user7.png" alt="integrante">
+          <img src="imagenes/user8.png" alt="integrante">
+          <img src="imagenes/user9.png" alt="integrante">
+        </div>
+      </div>
     </div>
   </div>
 
