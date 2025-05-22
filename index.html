@@ -60,75 +60,48 @@
       color: var(--azul-unam);
     }
     .buttons button,
-    .footer-buttons button {
+    .footer-buttons button,
+    .botones-ejemplo button {
       margin: 10px 5px;
       padding: 10px 20px;
-      font-size: 16px;
+      font-size: 14px;
       border-radius: 20px;
       border: none;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
     .buttons button:nth-child(1),
-    .footer-buttons button:nth-child(1) {
+    .footer-buttons button:nth-child(1),
+    .botones-ejemplo button:nth-child(1) {
       background: var(--dorado-unam);
       color: var(--azul-unam);
     }
     .buttons button:nth-child(2),
-    .footer-buttons button:nth-child(2) {
+    .footer-buttons button:nth-child(2),
+    .botones-ejemplo button:nth-child(2) {
       background: var(--azul-unam);
       color: var(--dorado-unam);
     }
-    .ejemplos {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-      background-color: #f0f0f0;
-    }
-    .ejemplo {
-      position: relative;
-      width: 300px;
-      height: 220px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 16px;
-      margin: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    .creditos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      gap: 10px;
+      padding: 30px;
+      background: var(--azul-unam);
       color: white;
+      justify-items: center;
     }
-    .ejemplo .capa-superior {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 15px;
-    }
-    .ejemplo h3 {
-      margin: 0;
-      font-size: 20px;
-      color: var(--dorado-claro);
-    }
-    .ejemplo p {
-      font-size: 14px;
-      margin: 5px 0;
-      color: #fff;
-    }
-    .rostros {
-      display: flex;
-      gap: 5px;
-    }
-    .rostros img {
-      width: 32px;
-      height: 32px;
+    .creditos img {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 2px solid var(--dorado-unam);
+    }
+    .creditos span {
+      font-size: 12px;
+      display: block;
+      text-align: center;
+      margin-top: 5px;
     }
   </style>
   <script>
@@ -136,22 +109,35 @@
       const menu = document.getElementById("menuOpciones");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const creditos = document.querySelector(".creditos");
+      const nombres = [
+        "Monky Banana", "Froggy Fly", "Froggy Fly", "Monky Banana", "Froggy Fly", "Monky Banana",
+        "Froggy Fly", "Froggy Fly", "Monky Banana", "Monky Banana", "Froggy Fly", "Froggy Fly",
+        "Monky Banana", "Monky Banana", "Froggy Fly", "Monky Banana", "Froggy Fly", "Froggy Fly",
+        "Monky Banana", "Froggy Fly", "Monky Banana", "Froggy Fly", "Monky Banana", "Froggy Fly",
+        "Monky Banana", "Froggy Fly", "Froggy Fly", "Monky Banana", "Froggy Fly", "Monky Banana",
+        "Monky Banana", "Froggy Fly", "Froggy Fly"
+      ];
+
+      nombres.forEach((nombre, i) => {
+        const div = document.createElement("div");
+        const img = document.createElement("img");
+        const span = document.createElement("span");
+
+        img.src = `imagenes/user${(i % 5) + 1}.png`;
+        img.alt = nombre;
+        span.textContent = nombre;
+
+        div.appendChild(img);
+        div.appendChild(span);
+        creditos.appendChild(div);
+      });
+    });
   </script>
 </head>
 <body>
-  <div class="navbar">
-    <div class="menu" onclick="toggleMenu()">
-      ≡
-      <div id="menuOpciones" class="menu-options">
-        <a href="#documentacion">Documentación</a>
-        <a href="#descargas">Descargas</a>
-        <a href="#ejemplos">Ejemplos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </div>
-    <div style="margin-left: 10px;">PPC</div>
-  </div>
-
   <div class="hero">
     <h1><span class="highlight">Programación Paralela y Concurrente</span> es el arte de dividir y distribuir una tarea con la intención de realizarla en menos tiempo entre múltiples computadoras.</h1>
     <p>Este proyecto busca conectar computadoras personales y así montar una red que sirva de lienzo para practicar este tipo de programación.</p>
@@ -162,59 +148,6 @@
     <img src="imagenes/foto.jpeg" alt="Imagen relevante de portada" style="width:80%; max-width:600px;">
   </div>
 
-  <div class="ejemplos">
-    <div class="ejemplo" style="background-image: url('imagenes/fraude2.png');">
-      <div class="capa-superior">
-        <div>
-          <img src="imagenes/lider1.png" alt="Hongo decorativo" style="width:50px;">
-          <h3>Detección de fraude</h3>
-          <p>Identificación de patrones sospechosos en grandes volúmenes de datos bancarios.</p>
-        </div>
-        <div class="rostros">
-          <img src="imagenes/user.png" alt="integrante">
-          <img src="imagenes/user.png" alt="integrante">
-          <img src="imagenes/user.png" alt="integrante">
-        </div>
-      </div>
-    </div>
-
-    <div class="ejemplo" style="background-image: url('imagenes/hospital2.png');">
-      <div class="capa-superior">
-        <div>
-          <img src="imagenes/monky.jpeg" alt="Hongo decorativo" style="width:50px;">
-          <h3>Atención hospitalaria</h3>
-          <p>Simulación de flujos médicos para optimizar los recursos del hospital.</p>
-        </div>
-        <div class="rostros">
-          <img src="imagenes/user.png" alt="integrante">
-          <img src="imagenes/user.png" alt="integrante">
-          <img src="imagenes/froggy.jpeg" alt="integrante">
-          <img src="imagenes/froggy.jpeg" alt="integrante">
-          <img src="imagenes/froggy.jpeg" alt="integrante">
-
-        </div>
-      </div>
-    </div>
-
-    <div class="ejemplo" style="background-image: url('imagenes/metro2.png');">
-      <div class="capa-superior">
-        <div>
-          <img src="imagenes/monky2.jpeg" alt="Hongo decorativo" style="width:50px;">
-          <h3>Movilidad en el Metro</h3>
-          <p>Análisis de trayectos para mejorar la eficiencia en el transporte público.</p>
-        </div>
-        <div class="rostros">
-          <img src="imagenes/user.png" alt="integrante">
-          <img src="imagenes/user.png" alt="integrante">
-          <img src="imagenes/user.png" alt="integrante">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-buttons">
-    <button>Ver más</button>
-    <button>Descargar</button>
-  </div>
+  <div class="creditos"></div>
 </body>
 </html>
