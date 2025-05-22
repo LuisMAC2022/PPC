@@ -25,7 +25,6 @@
       width: 100%;
       display: flex;
       align-items: center;
-      z-index: 999;
     }
     .menu {
       font-size: 24px;
@@ -41,7 +40,6 @@
       background: var(--azul-unam);
       border: 1px solid #ccc;
       padding: 10px;
-      z-index: 999;
     }
     .menu-options a {
       display: block;
@@ -52,23 +50,124 @@
     .menu-options a:hover {
       text-decoration: underline;
     }
-    .submenu {
-      position: relative;
-    }
-    .submenu:hover .submenu-options {
-      display: block;
-    }
-    .submenu-options {
-      display: none;
-      position: absolute;
-      left: 100%;
-      top: 0;
-      background: var(--azul-unam);
-      padding: 10px;
-      white-space: nowrap;
-    }
     .highlight {
       color: var(--dorado-unam);
+    }
+    .hero {
+      margin-top: 60px;
+      text-align: center;
+      padding: 40px;
+      color: var(--azul-unam);
+    }
+    .buttons button,
+    .footer-buttons button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .buttons button:nth-child(1),
+    .footer-buttons button:nth-child(1) {
+      background: var(--dorado-unam);
+      color: var(--azul-unam);
+    }
+    .buttons button:nth-child(2),
+    .footer-buttons button:nth-child(2) {
+      background: var(--azul-unam);
+      color: var(--dorado-unam);
+    }
+    .ejemplos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+      background-color: #f0f0f0;
+    }
+    .ejemplo {
+      position: relative;
+      width: 300px;
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 16px;
+      margin: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      color: white;
+    }
+    .ejemplo .capa-superior {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px;
+    }
+    .ejemplo h3 {
+      margin: 0;
+      font-size: 20px;
+      color: var(--dorado-claro);
+    }
+    .ejemplo p {
+      font-size: 14px;
+      margin: 5px 0;
+      color: #fff;
+    }
+    .rostros {
+      display: flex;
+      gap: 5px;
+    }
+    .rostros img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+    .creditos {
+      padding: 2rem;
+      background-color: var(--azul-claro);
+      color: white;
+    }
+    .creditos h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .colaboradores {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      justify-items: center;
+    }
+    .colaborador {
+      background-color: var(--azul-unam);
+      padding: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      width: 100%;
+      max-width: 200px;
+    }
+    .colaborador .foto {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, var(--dorado-unam), var(--dorado-claro));
+      margin: 0 auto 1rem;
+    }
+    .colaborador p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+    }
+    .colaborador .correo {
+      font-size: 0.75rem;
+      color: var(--dorado-claro);
+      word-break: break-word;
     }
   </style>
   <script>
@@ -83,14 +182,7 @@
     <div class="menu" onclick="toggleMenu()">
       ≡
       <div id="menuOpciones" class="menu-options">
-        <div class="submenu">
-          <a href="#documentacion">Documentación</a>
-          <div class="submenu-options">
-            <a href="https://deepwiki.com/JorgeMike/cluster/2-system-architecture" target="_blank">Wiki</a>
-            <a href="https://www.canva.com/design/DAGoHheVcxo/Tbx5G9rEiZkigZVspzd6Ag/edit" target="_blank">Manual Técnico</a>
-            <a href="Manual_IA.html" target="_blank">Manual de IA</a>
-          </div>
-        </div>
+        <a href="#documentacion">Documentación</a>
         <a href="#descargas">Descargas</a>
         <a href="#ejemplos">Ejemplos</a>
         <a href="#contacto">Contacto</a>
@@ -202,6 +294,7 @@
         <p>Monky Banana</p>
         <p class="correo">monky.banana@imagenes.com</p>
       </div>
+
       <div class="colaborador">
         <div class="foto"></div>
         <p>Froggy Fly</p>
